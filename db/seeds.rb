@@ -18,9 +18,9 @@ p "populating DB"
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample
   )
   rew = Review.create(
+    rating: rand(0..5),
     content: Faker::Restaurant.review,
     restaurant_id: res.id
   )
   p "Restaurant id: #{res.id} was created with review #{rew.id}"
-
 end
